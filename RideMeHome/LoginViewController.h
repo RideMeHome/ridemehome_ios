@@ -14,6 +14,9 @@
 
 
 @interface LoginViewController : UIViewController<NetworkingDelegate>
+{
+    NSMutableDictionary *dictObj;
+}
 - (IBAction)loginClicked:(id)sender;
 - (IBAction)cancelClicked:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *uNameField;

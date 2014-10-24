@@ -10,4 +10,6 @@
 
 @interface RequestCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UILabel *lbl_reqDetails;
+@property (strong, nonatomic) IBOutlet UILabel *lbl_status;
 @end

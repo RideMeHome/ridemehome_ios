@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface Signuptablecell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UITextField *signuptextfield;
+@property (strong, nonatomic) IBOutlet UIImageView *signupiconholder;
 
 @end

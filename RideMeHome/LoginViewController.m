@@ -7,7 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "HomeScreenViewController.h"
 
 
 
@@ -34,6 +33,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self.navigationController setNavigationBarHidden:NO];
+    [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:20.0f/255.0f green:20.0f/255.0f blue:20.0f/255.0f alpha:1.0f]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,7 +51,7 @@
     
     
     
-    NSMutableDictionary *dictObj = [[NSMutableDictionary alloc] init ];
+    dictObj = [[NSMutableDictionary alloc] init ];
     [dictObj setObject:uNameField.text forKey:@"username" ];
     [dictObj setObject:passwdField.text forKey:@"password" ];
     
@@ -95,7 +98,9 @@
 {
     [Utilities stopActivityIndicator];
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFY_LOGIN object:self userInfo:(NSDictionary *)resp.respData ];
-     [self.navigationController popViewControllerAnimated:YES];
+    // [self.navigationController popViewControllerAnimated:YES];
+    [Utilities setDataToCache:dictObj forkey:KEY_USERDATA];
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
 }
 -(void)downloadFailed : (Response *)resp

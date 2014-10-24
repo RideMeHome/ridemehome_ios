@@ -97,9 +97,12 @@ static UIActivityIndicatorView *indicator;
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     if ([prefs objectForKey:key] != nil) {
         [prefs removeObjectForKey:key];
+        [prefs synchronize];
     }
 
 }
+
+
 
 
 

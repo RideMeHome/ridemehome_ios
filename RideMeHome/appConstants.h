@@ -67,6 +67,10 @@
 
 #define COMMAND_NEWS 10004
 
+#define COMMAND_MYREQUESTS 10005
+
+#define COMMAND_PASSENGERLIST 10006
+
 
 //// list of local notification identifiers.
 
@@ -84,6 +88,10 @@
 #define KEY_MYSESSIONDATA @"myagenda"
 
 #define KEY_NEWSDATA @"newsdata"
+
+#define KEY_LOCATIONDATA @"storedlocations"
+
+#define KEY_CARPOOLSTATUS @"carpoolstatus"
 
 
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RideMeHomeController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

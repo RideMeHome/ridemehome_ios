@@ -7,7 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <GoogleMaps/GoogleMaps.h>
+
 
 @interface geocoders : NSObject
+{
+    GMSGeocoder *geo;
+}
+
++(geocoders *)getInstance;
+- (CLLocationCoordinate2D) geoCodeUsingAddress:(NSString *)address;
+-(NSString *)getAddressfromlat : (double)lat andlong :(double)lon;
+
+
+
 
 @end

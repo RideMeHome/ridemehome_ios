@@ -8,6 +8,11 @@
 
 #import "userDataObj.h"
 
+
 @implementation userDataObj
+
+@synthesize fullName,mobileNum,emailId,password,carmodel,cernerassoId,cernerteam,musicGenre;
+
+
 
 @end

@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utilities.h"
+#import "RequestCell.h"
+#import "GTMHTTPFetcherLogging.h"
+#import "GTLPassengerendpoint.h"
+#import "NetworkController.h"
+#import "GTLServiceCarpoolendpoint.h"
+#import "GTMHTTPFetcherLogging.h"
+#import "GTLCarpoolendpoint.h"
+#import "PassengerRideRequestScreenViewController.h"
 
-@interface MyRequestsScreen : UIViewController
+@interface MyRequestsScreen : UIViewController<UITableViewDataSource,UITableViewDelegate,NetworkingDelegate>
+{
+    NSMutableDictionary *requestsDict;
+    NSArray *allDrivers;
+    int type;
+}
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andscreenType : (int)sctype;
+@property (strong, nonatomic) IBOutlet UITableView *tbl_myRequests;
+
 
 @end

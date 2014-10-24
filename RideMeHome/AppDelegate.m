@@ -8,11 +8,29 @@
 
 #import "AppDelegate.h"
 
+static NSString *const kAPIKey = @"AIzaSyDk_t_pkKoN4m8XkMrEHkyynKfUWiKkris";
 @implementation AppDelegate
+{
+    id services_;;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    RideMeHomeController *test = [[RideMeHomeController alloc] initWithNibName:@"RideMeHomeController" bundle:nil];
+    
+    UINavigationController *naviController = [[UINavigationController alloc] initWithRootViewController:test  ];
+    naviController.navigationBarHidden = YES;
+    [self.window setRootViewController:naviController];
+    [self.window makeKeyAndVisible];
+    
+    [GMSServices provideAPIKey:kAPIKey];
+    services_ = [GMSServices sharedServices];
+    
     return YES;
 }
 							

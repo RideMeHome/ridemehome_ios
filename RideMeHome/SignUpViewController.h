@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SignUpScreen.h"
+#import "LoginViewController.h"
 
 @interface SignUpViewController : UIViewController
+
+- (IBAction)showSignUp:(id)sender;
+
+- (IBAction)showLogin:(id)sender;
+
+
 
 @end

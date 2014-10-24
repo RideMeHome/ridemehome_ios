@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface passengerCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet UILabel *lbl_passengerinfo;
+- (IBAction)acceptClicked:(id)sender;
+- (IBAction)rejectClicked:(id)sender;
 
 @end

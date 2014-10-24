@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GTMHTTPFetcherLogging.h"
+#import "GTLPassengerendpoint.h"
+#import "Utilities.h"
+#import "Request.h"
+#import "NetworkController.h"
+#import "passengerCell.h"
 
-@interface PassengerRideRequestScreenViewController : UIViewController
+@interface PassengerRideRequestScreenViewController : UIViewController<UITableViewDataSource,UITableViewDelegate , NetworkingDelegate ,UIAlertViewDelegate>
+{
+    NSNumber *poolId;
+    NSArray *passItems;
+}
 
+@property (strong, nonatomic) IBOutlet UITableView *tbl_passengerslist;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil andcarpoolId : (NSNumber *)carpoolid;
 @end

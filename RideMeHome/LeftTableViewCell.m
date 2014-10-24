@@ -8,7 +8,12 @@
 
 #import "LeftTableViewCell.h"
 
+
+
 @implementation LeftTableViewCell
+
+@synthesize img_iconholder,lbl_options;
+
 
 - (void)awakeFromNib
 {

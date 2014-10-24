@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utilities.h"
+#import "GTLLocationendpoint.h"
+#import "GTMHTTPFetcherLogging.h"
 
-@interface MyLocationScreenViewController : UIViewController
+@interface MyLocationScreenViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    NSDictionary *savedLocn;
+    NSArray *keysValue;
+}
+@property (strong, nonatomic) IBOutlet UITableView *savedlocnTableView;
 
 @end

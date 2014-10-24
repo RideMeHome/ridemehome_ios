@@ -8,7 +8,10 @@
 
 #import "RequestCell.h"
 
+
 @implementation RequestCell
+
+@synthesize lbl_reqDetails,lbl_status;
 
 - (void)awakeFromNib
 {

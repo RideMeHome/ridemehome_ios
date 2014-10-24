@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface LeftTableViewCell : UITableViewCell
+{
+    
+}
 
+@property (strong, nonatomic) IBOutlet UIImageView *img_iconholder;
+
+@property (strong, nonatomic) IBOutlet UILabel *lbl_options;
 @end
